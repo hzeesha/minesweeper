@@ -1,5 +1,6 @@
 # Minesweeper Game
-This project finds safe bike paths in a national park modeled as interconnected hexagonal chambers. The program identifies a path from the park entrance to all treasure chambers while avoiding sealed or dark chambers. The algorithm prioritizes treasure and lighted chambers for safety and optimal exploration.
+
+This is a classic Minesweeper game built from scratch using C++ and Qt. You left-click to reveal tiles, right-click to mark suspected mines, and try to clear the board without hitting one. The first click is always safe, and if a tile has no nearby mines, it auto-reveals surrounding spaces. Simple concept, just like the original.
 
 ## Project Images
 ![Minesweeper image](minesweeperEx.png)
