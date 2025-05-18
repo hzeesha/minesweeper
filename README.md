@@ -5,34 +5,49 @@ This project finds safe bike paths in a national park modeled as interconnected 
 ![Minesweeper image](minesweeperEx.png)
 
 ## **Key Features**
-- **Implemented a Custom Stack (DLStack)**:
-  - Built using a doubly linked list.
-  - Supports advanced operations like removing the k-th element.
-- **Pathfinding Algorithm**:
-  - Traverses the map to find paths from the entrance to all treasure chambers.
-  - Follows strict prioritization rules:
-    1. Treasure chambers over others.
-    2. Lighted chambers over dim chambers.
-  - Avoids sealed and dark chambers.
 
-## **Technologies**
-- **Java**: Core implementation.
-- **Custom Data Structures**: Doubly linked list and extended stack.
+- **Minesweeper Board**  
+  16x30 grid with 99 mines, matching the traditional expert difficulty.
 
-## **Results**
-- Successfully computed valid paths while visualizing the traversal process.
-- Ensured compliance with constraints like prioritizing treasure and lighted chambers.
-- Verified functionality using provided test cases and additional scenarios.
+- **Safe First Click**  
+  Ensures the first tile clicked is never a mine.
 
-## **Challenges**
-- Designing a flexible stack capable of advanced operations.
-- Efficiently handling chamber prioritization in pathfinding.
+- **Right-Click Marking System**  
+  Toggle through:
+  - 🚩 Flag  
+  - ❓ Question mark  
+  - Empty
 
-## **Execution**
-To run the program:
-1. Navigate to the project root directory.
-2. Run the following commands:
-   ```bash
-   javac src/*.java
-   java -cp src Pyramid map1.txt
-There are 5 tester maps. So, mapx.txt will change the map
+- **Recursive Reveal of Empty Spaces**  
+  Automatically uncovers adjacent safe tiles with zero neighboring mines.
+
+- **Game Reset and Win/Lose Messages**  
+  Restart the game after finishing — with prompt dialogs and clean board reset.
+---
+
+## **Technologies Used**
+
+- **C++11** – Core logic and object-oriented design  
+- **Qt (Widgets Module)** – GUI development and layout management  
+- **QPushButton Customization** – For interactive grid buttons  
+- **Qt Resource System (`.qrc`)** – For bundling icons and images
+
+---
+
+## How to Run
+
+### Prerequisites:
+- Qt 5 or 6 installed
+- C++ compiler (e.g., g++, clang++)
+- Qt Creator or command-line `qmake`/`make`
+
+### Build & Run (with Qt Creator):
+1. Open `minesweeper.pro` in **Qt Creator**
+2. Configure the kit (GCC, Clang, MSVC, etc.)
+3. Click **Run**
+
+### Command-Line (Linux/macOS):
+```bash
+qmake
+make
+./Minesweeper
